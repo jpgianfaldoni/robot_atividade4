@@ -15,7 +15,8 @@ import time
 # import smach_ros
 
 
-def identifica_cor(frame, low = [20, 70, 70], high = [50, 255, 255]):
+
+def identifica_cor(frame, low = [36, 0, 0], high = [70, 255, 255]):
     def auto_canny(image, sigma=0.33):
         # compute the median of the single channel pixel intensities
         v = np.median(image)

@@ -52,7 +52,15 @@ def roda_todo_frame(imagem):
 		antes = time.clock()
 		cv_image = bridge.compressed_imgmsg_to_cv2(imagem, "bgr8")
 		cv_image = cv2.flip(cv_image, -1)
-		media, centro, maior_area =  cormodule.identifica_cor(cv_image)
+
+		
+
+		media, centro, maior_area =  cormodule.identifica_cor(cv_image,(36, 80, 80), (70, 255,255)) 
+		#verde (36,80, 80), (70,255,255)
+		
+		
+		
+		
 		depois = time.clock()
 		cv2.imshow("Camera", cv_image)
 		# print("Média: ", media)
