@@ -60,7 +60,7 @@ def identifica_cor(frame, low = [36, 0, 0], high = [70, 255, 255]):
         media = media.astype(np.int32)
         cv2.circle(frame, (media[0], media[1]), 5, [0, 255, 0])
         cross(frame, centro, [255,0,0], 1, 17)
-        print("Fazendo contornos")
+        #print("Fazendo contornos")
     else:
         media = (0, 0)
 
