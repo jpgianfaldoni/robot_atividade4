@@ -99,7 +99,7 @@ def findCenter():
 def moveForward():
 	while True:
 		direction = media[0] - centro[0]
-		lista1 = [x<0.5 for x in dados[-5:5]]
+		lista1 = [x<0.5 for x in [dados[i] for i in range(-5,5)]]
 		print(lista1)
 		if direction >= 1: 
 			vel = Twist(Vector3(0.1,0,0), Vector3(0,0,-0.1))
@@ -153,7 +153,7 @@ if __name__=="__main__":
 		while not rospy.is_shutdown():
 			vel = Twist(Vector3(0,0,0), Vector3(0,0,0))
 			if len(media) != 0 and len(centro) != 0 and inFront == False:
-				if maior_area>1000:
+				if maior_area>200:
 					findCenter()
 					inFront = moveForward()
 					inFront = leTouch()
